@@ -6,7 +6,13 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:25:27 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/04 11:25:28 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/05 09:14:56 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Dog.hpp"
+
+Dog::Dog( void ) : Animal(name)
+{
+	std::cout << "Dog " << _type << " is created" << std::endl;
+}
