@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 11:25:27 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/09 22:51:41 by alubrano         ###   ########.fr       */
+/*   Created: 2026/08/04 11:25:43 by alubrano          #+#    #+#             */
+/*   Updated: 2026/08/09 22:27:28 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
+#include "Brain.hpp"
 
-Dog::Dog( void ) : Animal("Dog")
+Cat::Cat( void ) : Animal("Cat")
 {
 	_brain = new Brain();
-	std::cout << "Dog " << _type << " is created from Animal" << std::endl;
+	std::cout << "A beautiful " << _type << " is created from Animal" << std::endl;
 }
 
-Dog::~Dog( void )
+Cat::~Cat( void )
 {
-	delete (_brain);
-	std::cout << "Dog " << _type << " is destroyed." << std::endl;
+	delete(_brain);
+	std::cout << "Oh noo " << _type << " is destroyed." << std::endl;
 }
-Dog &Dog::operator=(Dog const &src)
+Cat &Cat::operator=(Cat const &src)
 {
 	Animal::operator=(src);
 	delete(_brain);
@@ -31,17 +32,12 @@ Dog &Dog::operator=(Dog const &src)
 	return (*this);
 }
 
-Dog::Dog(Dog const &other) : Animal(other)
+Cat::Cat(Cat const &other) : Animal(other)
 {
 	_brain = new Brain(*other._brain);
 }
 
-void Dog::makeSound( void ) const
+void Cat::makeSound( void ) const
 {
-	std::cout << "Woufff!" << std::endl;
-}
-
-Brain* Dog::getBrain(void ) const
-{
-	return (_brain);
+	std::cout << "Miaouu!" << std::endl;
 }

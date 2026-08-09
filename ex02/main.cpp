@@ -6,7 +6,7 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:26:40 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/09 22:52:58 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/09 22:42:24 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ int main()
 
 	Dog originalDog;
 	Dog copyDog(originalDog);
-
-	std::cout << "Original brain adresse: " << originalDog.getBrain() << std::endl;
-	std::cout << "Copy brain adresse: " << copyDog.getBrain() << std::endl;
 
 	for(int i = 0; i < size; i++)
 		delete animals[i];

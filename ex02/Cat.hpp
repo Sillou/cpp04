@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 11:25:20 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/09 22:50:57 by alubrano         ###   ########.fr       */
+/*   Created: 2026/08/04 11:25:36 by alubrano          #+#    #+#             */
+/*   Updated: 2026/08/09 22:25:42 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Cat : public Animal
 {
 private:
 	Brain* _brain;
 
 public:
-	Dog( void );
-	Dog(Dog const &other);
-	Dog &operator=(Dog const &src);
-	~Dog();
+	Cat( void );
+	Cat(Cat const &other);
+	Cat &operator=(Cat const &src);
+	~Cat();
 
-	Brain* getBrain() const;
 	virtual void makeSound() const;
 };
 

@@ -6,7 +6,7 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:25:20 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/09 22:50:57 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/09 22:10:50 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ public:
 	Dog &operator=(Dog const &src);
 	~Dog();
 
-	Brain* getBrain() const;
 	virtual void makeSound() const;
 };
 

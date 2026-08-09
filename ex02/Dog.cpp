@@ -6,7 +6,7 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:25:27 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/09 22:51:41 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/09 22:23:34 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,4 @@ Dog::Dog(Dog const &other) : Animal(other)
 void Dog::makeSound( void ) const
 {
 	std::cout << "Woufff!" << std::endl;
-}
-
-Brain* Dog::getBrain(void ) const
-{
-	return (_brain);
 }

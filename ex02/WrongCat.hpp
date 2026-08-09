@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 11:25:20 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/09 22:50:57 by alubrano         ###   ########.fr       */
+/*   Created: 2026/08/04 11:26:27 by alubrano          #+#    #+#             */
+/*   Updated: 2026/08/09 21:42:51 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 private:
-	Brain* _brain;
 
 public:
-	Dog( void );
-	Dog(Dog const &other);
-	Dog &operator=(Dog const &src);
-	~Dog();
+	WrongCat( void );
+	WrongCat(WrongCat const &other);
+	WrongCat &operator=(WrongCat const &src);
+	~WrongCat();
 
-	Brain* getBrain() const;
-	virtual void makeSound() const;
+	void makeSound() const;
 };
 
 #endif
+

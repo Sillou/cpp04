@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/04 11:25:20 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/09 22:50:57 by alubrano         ###   ########.fr       */
+/*   Created: 2026/08/04 11:25:05 by alubrano          #+#    #+#             */
+/*   Updated: 2026/08/09 22:45:46 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <string>
+#include <iostream>
 
-class Dog : public Animal
+
+class Animal
 {
-private:
-	Brain* _brain;
-
+protected:
+	std::string _type;
 public:
-	Dog( void );
-	Dog(Dog const &other);
-	Dog &operator=(Dog const &src);
-	~Dog();
+	Animal(const std::string &name);
+	Animal(Animal const &other);
+	Animal &operator=(Animal const &src);
+	virtual ~Animal();
 
-	Brain* getBrain() const;
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
+	std::string const& getType( void ) const;
 };
+
 
 #endif
