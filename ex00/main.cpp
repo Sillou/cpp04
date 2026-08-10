@@ -6,7 +6,7 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:26:40 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/10 16:53:16 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/10 17:46:39 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,36 +18,38 @@
 
 int main()
 {
-	const Animal* meta = new Animal(0);
+	try
+	{
+		const Animal* meta = new Animal();
+		const Animal* j = new Dog();
+		const Animal* i = new Cat();
 
+		std::cout << j->getType() << " " << std::endl;
+		std::cout << i->getType() << " " << std::endl;
 
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	Cat p;
-	std::cout << "this p" << std::endl;
-	p.makeSound();
+		i->makeSound(); //will output the cat sound!
+		j->makeSound();
+		meta->makeSound();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+		delete (i);
+		delete(j);
+		delete(meta);
 
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+		const WrongAnimal *k = new WrongAnimal("");
+		const WrongAnimal *l = new WrongCat();
 
-	delete (i);
-	delete(j);
-	delete(meta);
+		std::cout << l->getType() << " " << std::endl;
 
-	const WrongAnimal *k = new WrongAnimal("");
-	const WrongAnimal *l = new WrongCat();
+		l->makeSound();
+		k->makeSound();
 
-	std::cout << l->getType() << " " << std::endl;
-
-	l->makeSound();
-	k->makeSound();
-
-	delete(l);
-	delete(k);
-
+		delete(l);
+		delete(k);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+		return (1);
+	}
 	return (0);
 }
