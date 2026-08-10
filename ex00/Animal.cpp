@@ -6,16 +6,20 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:25:12 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/07 11:14:44 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/10 17:01:44 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(const std::string &name)
+Animal::Animal(const std::string &name) : _type(name)
 {
-	_type = name;
 	std::cout << "Animal " << _type << " is created" << std::endl;
+}
+
+Animal::Animal( void ) : _type ("Animal")
+{
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Animal::~Animal( void )

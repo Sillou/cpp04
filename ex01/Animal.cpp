@@ -6,7 +6,7 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:25:12 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/07 11:14:44 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/10 16:49:50 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ Animal::Animal(const std::string &name)
 {
 	_type = name;
 	std::cout << "Animal " << _type << " is created" << std::endl;
+}
+
+Animal::Animal( void ) : _type("Animal")
+{
+	std::cout << "Animal default constructor called." << std::endl;
 }
 
 Animal::~Animal( void )

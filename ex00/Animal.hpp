@@ -6,7 +6,7 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:25:05 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/05 08:59:39 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/10 16:47:50 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ protected:
 	std::string _type;
 public:
 	Animal(const std::string &name);
+	Animal( void );
 	Animal(Animal const &other);
 	Animal &operator=(Animal const &src);
 	virtual ~Animal();

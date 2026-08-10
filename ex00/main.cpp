@@ -6,7 +6,7 @@
 /*   By: alubrano <alubrano@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:26:40 by alubrano          #+#    #+#             */
-/*   Updated: 2026/08/09 21:44:04 by alubrano         ###   ########.fr       */
+/*   Updated: 2026/08/10 16:53:16 by alubrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,14 @@
 
 int main()
 {
-	const Animal* meta = new Animal("");
+	const Animal* meta = new Animal(0);
+
 
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
+	Cat p;
+	std::cout << "this p" << std::endl;
+	p.makeSound();
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
